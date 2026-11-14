@@ -13,11 +13,12 @@
 [ext_resource type="PackedScene" path="res://ui/game_over_menu.tscn" id="7_gameover"]
 [ext_resource type="PackedScene" uid="uid://c24y3id3m7652" path="res://Assets/lvls/chunks/chunk04.tscn" id="7_getpj"]
 [ext_resource type="Script" uid="uid://cg20gh1fl185c" path="res://chunk_manager.gd" id="8_chunk_manager"]
-[ext_resource type="PackedScene" uid="uid://dbvptlofouuv0" path="res://Assets/lvls/chunks/chunk05.tscn" id="8_ryguw"]
 [ext_resource type="PackedScene" uid="uid://dbvptlofouuv0" path="res://Assets/lvls/chunks/chunk10.tscn" id="9_d13ii"]
 [ext_resource type="PackedScene" uid="uid://cg3pa5vnnb77u" path="res://Assets/lvls/chunk_template.tscn" id="9_start_chunk"]
 [ext_resource type="PackedScene" uid="uid://i0lhnib8ldpw" path="res://Assets/lvls/chunks/chunk11.tscn" id="10_1u8w0"]
+[ext_resource type="PackedScene" uid="uid://dixvja741oc6b" path="res://Assets/lvls/chunks/chunk06.tscn" id="10_getpj"]
 [ext_resource type="AudioStream" uid="uid://chrtabh4wpqqc" path="res://Assets/sounds/freesound_community-boing-101318.mp3" id="11_efxa6"]
+[ext_resource type="PackedScene" uid="uid://bt0yhvcteawff" path="res://Assets/lvls/chunks/chunk08.tscn" id="11_ryguw"]
 [ext_resource type="Script" uid="uid://d0d0vmkjbqmpq" path="res://label.gd" id="12_dg77c"]
 [ext_resource type="PackedScene" uid="uid://bmuf5rr2mq3dv" path="res://bill.tscn" id="16_2cqfq"]
 
@@ -37,7 +38,7 @@ texture = ExtResource("2_ycdy4")
 [node name="ChunkManager" type="Node2D" parent="." unique_id=918404509]
 position = Vector2(0, 64)
 script = ExtResource("8_chunk_manager")
-chunk_scenes = Array[PackedScene]([ExtResource("4_chunk"), ExtResource("5_w48qg"), ExtResource("6_vivmo"), ExtResource("7_getpj"), ExtResource("8_ryguw"), ExtResource("9_d13ii"), ExtResource("10_1u8w0")])
+chunk_scenes = Array[PackedScene]([ExtResource("4_chunk"), ExtResource("5_w48qg"), ExtResource("6_vivmo"), ExtResource("7_getpj"), ExtResource("9_d13ii"), ExtResource("9_d13ii"), ExtResource("10_1u8w0"), ExtResource("10_getpj"), ExtResource("11_ryguw")])
 start_chunk_scene = ExtResource("9_start_chunk")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1514455966 node_paths=PackedStringArray("target")]
