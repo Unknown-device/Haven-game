@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://1caxp2viqwsh"]
+[gd_scene format=3 uid="uid://dx6dyrdq5c42e"]
 
 [ext_resource type="Script" uid="uid://50breiuwbis3" path="res://ui/main_menu.gd" id="1_main_menu"]
 [ext_resource type="FontFile" uid="uid://x42fvcpx8yof" path="res://Assets/BigBlueTerm437NerdFont-Regular.ttf" id="2_0dkrt"]
@@ -39,7 +39,7 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0.96, 0.97, 1, 1)
 theme_override_fonts/font = ExtResource("2_0dkrt")
 theme_override_font_sizes/font_size = 72
-text = "BOUNCE BACK"
+text = "BOUNCY BALL"
 horizontal_alignment = 1
 
 [node name="Subtitle" type="Label" parent="CenterContainer/VBoxContainer" unique_id=1668600295]
