@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://neafyrt5gjco"]
+
+[ext_resource type="Texture2D" uid="uid://gngotnlh21p3" path="res://Assets/ball_rot.png" id="1_x8fbi"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mojyh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_x8fbi")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mojyh"]
+radius = 16.0
+
+[node name="Ball" type="CharacterBody2D" unique_id=293557840]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1214180839]
+sprite_frames = SubResource("SpriteFrames_mojyh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=686452494]
+shape = SubResource("CircleShape2D_mojyh")
