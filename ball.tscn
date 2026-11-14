@@ -129,14 +129,6 @@ point_count = 3
 [node name="Ball" type="RigidBody2D" unique_id=520232695 groups=["ball"]]
 metadata/polarity = -1
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1214180839]
-sprite_frames = SubResource("SpriteFrames_mojyh")
-animation = &"blau"
-autoplay = "blau"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=686452494]
-shape = SubResource("CircleShape2D_mojyh")
-
 [node name="Trail" type="Line2D" parent="."]
 top_level = true
 show_behind_parent = true
@@ -149,3 +141,11 @@ antialiased = true
 gradient = SubResource("Gradient_trail")
 width_curve = SubResource("Curve_trail_width")
 script = ExtResource("3_trail")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1214180839]
+sprite_frames = SubResource("SpriteFrames_mojyh")
+animation = &"blau"
+autoplay = "blau"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=686452494]
+shape = SubResource("CircleShape2D_mojyh")
