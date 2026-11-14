@@ -17,6 +17,8 @@ func _process(delta: float) -> void:
 func _integrate_forces(state: PhysicsDirectBodyState2D) -> void:
 	var dir := Input.get_axis("ui_left", "ui_right")
 	state.linear_velocity.x = dir * speed
+	
+@export var player: AudioStreamPlayer
 
 func _on_body_entered(body: Node) -> void:
 	print(body.get_path())
@@ -24,6 +26,8 @@ func _on_body_entered(body: Node) -> void:
 	if body == $"../Pluspol":
 		sprite.play("rot")
 		self.gravity_scale = -1
+		player.play()
 	if body == $"../Minuspol":
 		self.gravity_scale = 1
 		sprite.play("blau")
+		player.play()
