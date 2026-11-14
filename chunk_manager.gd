@@ -5,6 +5,7 @@ extends Node2D
 ## Setup:
 ##   - Place this node at (0, 64) in main.tscn (same y as the old Chunk01).
 ##   - Assign your chunk scenes to chunk_scenes.
+##   - Assign a plain chunk to start_chunk_scene to fill the area behind the start.
 ##   - Leave ball_path empty to auto-find the node in the "ball" group.
 
 const CHUNK_WIDTH := 1152.0
@@ -13,6 +14,8 @@ const AHEAD := 2    ## Extra chunks kept past the right edge of the screen.
 const BEHIND := 1   ## Extra chunks kept behind the left edge of the screen.
 
 @export var chunk_scenes: Array[PackedScene] = []
+@export var start_chunk_scene: PackedScene  ## Safe chunk placed before start_x.
+@export var start_chunks_before := 1         ## How many start chunks to place to the left.
 @export var ball_path: NodePath
 @export var start_x := 0.0
 @export var avoid_immediate_repeat := true
@@ -41,7 +44,20 @@ func _ready() -> void:
 		push_error("ChunkManager: no ball found. Set ball_path or add the ball to the 'ball' group.")
 		return
 
+	_spawn_start_chunks()
 	_ensure_ahead()
+
+
+func _spawn_start_chunks() -> void:
+	if start_chunk_scene == null:
+		return
+
+	for i in range(start_chunks_before):
+		# Spawn left to right so _active stays ordered from oldest to newest.
+		var chunk := start_chunk_scene.instantiate() as Node2D
+		chunk.position = Vector2(start_x - CHUNK_WIDTH * (start_chunks_before - i), 0.0)
+		add_child(chunk)
+		_active.append(chunk)
 
 
 func _process(_delta: float) -> void:
