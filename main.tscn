@@ -3,10 +3,13 @@
 [ext_resource type="PackedScene" uid="uid://neafyrt5gjco" path="res://ball.tscn" id="1_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://bfuywkg4nxid7" path="res://pol.tscn" id="2_h2yge"]
 [ext_resource type="Script" uid="uid://boa5scnw8xkf7" path="res://camera_2d.gd" id="2_lquwl"]
+[ext_resource type="Texture2D" uid="uid://dfwloemkaot7n" path="res://Assets/background.png" id="2_ycdy4"]
 [ext_resource type="Script" uid="uid://rxm52wuppdwv" path="res://fall.gd" id="3_h2yge"]
 [ext_resource type="PackedScene" uid="uid://cmto3t4kbvspa" path="res://Assets/lvls/chunks/chunk01.tscn" id="4_chunk"]
 [ext_resource type="Script" uid="uid://dyqvu0mhy5n8g" path="res://game.gd" id="5_game"]
+[ext_resource type="PackedScene" uid="uid://bdp2yyha7w3w6" path="res://Assets/lvls/chunks/chunk02.tscn" id="5_w48qg"]
 [ext_resource type="PackedScene" path="res://ui/pause_menu.tscn" id="6_pause"]
+[ext_resource type="PackedScene" uid="uid://djv6wun4pl8il" path="res://Assets/lvls/chunks/chunk03.tscn" id="6_vivmo"]
 [ext_resource type="PackedScene" path="res://ui/game_over_menu.tscn" id="7_gameover"]
 [ext_resource type="Script" uid="uid://cg20gh1fl185c" path="res://chunk_manager.gd" id="8_chunk_manager"]
 [ext_resource type="PackedScene" uid="uid://cg3pa5vnnb77u" path="res://Assets/lvls/chunk_template.tscn" id="9_start_chunk"]
@@ -16,10 +19,20 @@
 [node name="Node2D" type="Node2D" unique_id=663734214]
 script = ExtResource("5_game")
 
+[node name="Parallax2D" type="Parallax2D" parent="." unique_id=453716466]
+visible = false
+scroll_offset = Vector2(448, 0)
+repeat_size = Vector2(256, 0)
+repeat_times = 10
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D" unique_id=103751515]
+position = Vector2(128, 320)
+texture = ExtResource("2_ycdy4")
+
 [node name="ChunkManager" type="Node2D" parent="." unique_id=918404509]
 position = Vector2(0, 64)
 script = ExtResource("8_chunk_manager")
-chunk_scenes = Array[PackedScene]([ExtResource("4_chunk")])
+chunk_scenes = Array[PackedScene]([ExtResource("4_chunk"), ExtResource("5_w48qg"), ExtResource("6_vivmo")])
 start_chunk_scene = ExtResource("9_start_chunk")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1514455966 node_paths=PackedStringArray("target")]
@@ -49,6 +62,8 @@ stream = ExtResource("11_efxa6")
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=866577272]
 
 [node name="Label" type="Label" parent="CanvasLayer" unique_id=979544594]
-offset_right = 40.0
-offset_bottom = 23.0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 48.0
+offset_bottom = 31.0
 script = ExtResource("12_dg77c")
