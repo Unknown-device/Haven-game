@@ -2,10 +2,136 @@
 
 [ext_resource type="Texture2D" uid="uid://g0qyltc3cjlu" path="res://Assets/spike.png" id="2_2xrev"]
 [ext_resource type="Script" uid="uid://bwd1ww52wmrh5" path="res://spike.gd" id="2_spike"]
+[ext_resource type="Texture2D" uid="uid://cguamq1cmyk7m" path="res://Assets/spike_rot_animation.png" id="2_tki4m"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_06dmb"]
+atlas = ExtResource("2_tki4m")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6yr3h"]
+atlas = ExtResource("2_tki4m")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jdjux"]
+atlas = ExtResource("2_tki4m")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e0qrv"]
+atlas = ExtResource("2_tki4m")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cj0c6"]
+atlas = ExtResource("2_tki4m")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7utvq"]
+atlas = ExtResource("2_tki4m")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0d2h1"]
+atlas = ExtResource("2_tki4m")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_38saj"]
+atlas = ExtResource("2_tki4m")
+region = Rect2(224, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_mojyh"]
 animations = [{
 "frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_06dmb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6yr3h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jdjux")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e0qrv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cj0c6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7utvq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0d2h1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_38saj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_2xrev")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_2xrev")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_2xrev")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_2xrev")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_2xrev")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_2xrev")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_2xrev")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_2xrev")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_2xrev")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_2xrev")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_2xrev")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_2xrev")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_2xrev")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_2xrev")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_2xrev")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_2xrev")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_2xrev")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_2xrev")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_2xrev")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_2xrev")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_2xrev")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_2xrev")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_2xrev")
+}, {
 "duration": 1.0,
 "texture": ExtResource("2_2xrev")
 }],
@@ -21,9 +147,10 @@ size = Vector2(24, 20)
 scale = Vector2(2, 2)
 script = ExtResource("2_spike")
 
-[node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=743107030]
+[node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=1629123683]
 sprite_frames = SubResource("SpriteFrames_mojyh")
 autoplay = "default"
+frame_progress = 0.6671013
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=272744782]
 position = Vector2(0, 6)
