@@ -12,13 +12,11 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 	
-@export var move_force := 1500.0
-@export var max_speed := 400.0
+@export var speed := 300.0
 
-func _physics_process(_delta: float) -> void:
-	var dir := Input.get_axis("ui_left", "ui_right")   # -1, 0 or 1
-	if dir * linear_velocity.x < max_speed:
-		apply_central_force(Vector2(dir * move_force, 0))
+func _integrate_forces(state: PhysicsDirectBodyState2D) -> void:
+	var dir := Input.get_axis("ui_left", "ui_right")
+	state.linear_velocity.x = dir * speed
 
 func _on_body_entered(body: Node) -> void:
 	print(body.get_path())
