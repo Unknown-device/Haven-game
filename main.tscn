@@ -8,12 +8,12 @@
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1514455966]
 position = Vector2(576, 320)
 
-[node name="Ball" parent="." unique_id=293557840 instance=ExtResource("1_0xm2m")]
-position = Vector2(256, 232)
-
 [node name="Pluspol" parent="." unique_id=1514089214 instance=ExtResource("2_h2yge")]
 position = Vector2(256, 576)
 
 [node name="Minuspol" parent="." unique_id=2101200135 instance=ExtResource("2_h2yge")]
 position = Vector2(256, 64)
 rotation = 3.1415927
+
+[node name="Ball" parent="." unique_id=293557840 instance=ExtResource("1_0xm2m")]
+position = Vector2(263.8011, 206.28915)

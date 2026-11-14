@@ -16,7 +16,8 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_mojyh"]
 radius = 16.0
 
-[node name="Ball" type="CharacterBody2D" unique_id=293557840]
+[node name="Ball" type="RigidBody2D" unique_id=520232695]
+metadata/polarity = -1
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1214180839]
 sprite_frames = SubResource("SpriteFrames_mojyh")
