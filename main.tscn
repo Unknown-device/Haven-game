@@ -5,8 +5,12 @@
 [ext_resource type="Script" uid="uid://boa5scnw8xkf7" path="res://camera_2d.gd" id="2_lquwl"]
 [ext_resource type="Script" uid="uid://rxm52wuppdwv" path="res://fall.gd" id="3_h2yge"]
 [ext_resource type="PackedScene" uid="uid://cmto3t4kbvspa" path="res://Assets/lvls/chunk01.tscn" id="4_chunk"]
+[ext_resource type="Script" path="res://game.gd" id="5_game"]
+[ext_resource type="PackedScene" path="res://ui/pause_menu.tscn" id="6_pause"]
+[ext_resource type="PackedScene" path="res://ui/game_over_menu.tscn" id="7_gameover"]
 
 [node name="Node2D" type="Node2D" unique_id=663734214]
+script = ExtResource("5_game")
 
 [node name="Chunk01" parent="." unique_id=1019789650 instance=ExtResource("4_chunk")]
 position = Vector2(0, 64)
@@ -26,3 +30,7 @@ rotation = 3.1415927
 [node name="Ball" parent="." unique_id=293557840 instance=ExtResource("1_0xm2m")]
 position = Vector2(263.8011, 206.28915)
 script = ExtResource("3_h2yge")
+
+[node name="PauseMenu" parent="." instance=ExtResource("6_pause")]
+
+[node name="GameOverMenu" parent="." instance=ExtResource("7_gameover")]
