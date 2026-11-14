@@ -8,12 +8,15 @@
 [ext_resource type="Script" path="res://game.gd" id="5_game"]
 [ext_resource type="PackedScene" path="res://ui/pause_menu.tscn" id="6_pause"]
 [ext_resource type="PackedScene" path="res://ui/game_over_menu.tscn" id="7_gameover"]
+[ext_resource type="Script" path="res://chunk_manager.gd" id="8_chunk_manager"]
 
 [node name="Node2D" type="Node2D" unique_id=663734214]
 script = ExtResource("5_game")
 
-[node name="Chunk01" parent="." unique_id=1019789650 instance=ExtResource("4_chunk")]
+[node name="ChunkManager" type="Node2D" parent="."]
 position = Vector2(0, 64)
+script = ExtResource("8_chunk_manager")
+chunk_scenes = Array[PackedScene]([ExtResource("4_chunk")])
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1514455966 node_paths=PackedStringArray("target")]
 position = Vector2(576, 320)
