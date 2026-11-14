@@ -1,0 +1,20 @@
+[gd_scene format=4 uid="uid://cmto3t4kbvspa"]
+
+[ext_resource type="TileSet" uid="uid://b2j1wuxjblmu0" path="res://Assets/lvls/lvl1.tres" id="1_uiio8"]
+[ext_resource type="PackedScene" uid="uid://bknlm2ij1fa45" path="res://Assets/lvls/spike_blau.tscn" id="2_6mv8u"]
+[ext_resource type="PackedScene" uid="uid://bxwilrem56v1k" path="res://Assets/lvls/spike_rot.tscn" id="3_usnty"]
+
+[node name="Chunk01" type="Node2D" unique_id=1019789650]
+
+[node name="terrain" type="TileMapLayer" parent="." unique_id=21880239]
+tile_map_data = PackedByteArray("AAAAAP//AAADAAMAADABAP//AAACAAMAADACAP//AAACAAMAADADAP//AAACAAMAADAEAP//AAACAAMAADAFAP//AAACAAMAADAGAP//AAACAAMAADAHAP//AAACAAMAADAIAP//AAACAAMAADAJAP//AAACAAMAADAKAP//AAACAAMAADALAP//AAACAAMAADAMAP//AAACAAMAADANAP//AAACAAMAADAOAP//AAACAAMAADAPAP//AAACAAMAADAQAP//AAACAAMAADARAP//AAACAAMAADAAAAgAAAACAAMAAAABAAgAAAACAAMAAAACAAgAAAACAAMAAAADAAgAAAACAAMAAAAEAAgAAAACAAMAAAAFAAgAAAACAAMAAAAGAAgAAAACAAMAAAAHAAgAAAACAAMAAAAIAAgAAAACAAMAAAAJAAgAAAACAAMAAAAKAAgAAAACAAMAAAALAAgAAAACAAMAAAAMAAgAAAACAAMAAAANAAgAAAACAAMAAAAOAAgAAAACAAMAAAAPAAgAAAACAAMAAAAQAAgAAAACAAMAAAARAAgAAAACAAMAAAA=")
+tile_set = ExtResource("1_uiio8")
+
+[node name="hazards" type="Node2D" parent="terrain" unique_id=118875605]
+
+[node name="Spike" parent="terrain/hazards" unique_id=266197569 instance=ExtResource("2_6mv8u")]
+position = Vector2(536, 30)
+rotation = -3.1415927
+
+[node name="Spike2" parent="terrain/hazards" unique_id=390317950 instance=ExtResource("3_usnty")]
+position = Vector2(625, 480)

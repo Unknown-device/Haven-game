@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bxwilrem56v1k"]
+
+[ext_resource type="Texture2D" uid="uid://dnhgv0hwkock4" path="res://Assets/spike_rot.png" id="1_ydvp2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_17o4a"]
+
+[node name="Spike" type="Area2D" unique_id=266197569]
+scale = Vector2(2, 2)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=935354217]
+texture = ExtResource("1_ydvp2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=272744782]
+position = Vector2(2, 6)
+shape = SubResource("RectangleShape2D_17o4a")

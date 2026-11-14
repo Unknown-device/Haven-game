@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bknlm2ij1fa45"]
+
+[ext_resource type="Texture2D" uid="uid://b34kr6s7yvmhq" path="res://Assets/spike_blau.png" id="1_0oyr2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_17o4a"]
+
+[node name="Spike" type="Area2D" unique_id=266197569]
+scale = Vector2(2, 2)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=481340937]
+texture = ExtResource("1_0oyr2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1542067068]
+position = Vector2(2, 6)
+shape = SubResource("RectangleShape2D_17o4a")
