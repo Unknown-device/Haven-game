@@ -15,6 +15,8 @@
 [ext_resource type="PackedScene" uid="uid://cg3pa5vnnb77u" path="res://Assets/lvls/chunk_template.tscn" id="9_start_chunk"]
 [ext_resource type="AudioStream" uid="uid://chrtabh4wpqqc" path="res://Assets/sounds/freesound_community-boing-101318.mp3" id="11_efxa6"]
 [ext_resource type="Script" uid="uid://d0d0vmkjbqmpq" path="res://label.gd" id="12_dg77c"]
+[ext_resource type="PackedScene" uid="uid://bmuf5rr2mq3dv" path="res://bill.tscn" id="16_2cqfq"]
+[ext_resource type="Script" uid="uid://dgc8jfflib673" path="res://bill.gd" id="17_yaehf"]
 
 [node name="Node2D" type="Node2D" unique_id=663734214]
 script = ExtResource("5_game")
@@ -67,3 +69,9 @@ offset_top = 8.0
 offset_right = 48.0
 offset_bottom = 31.0
 script = ExtResource("12_dg77c")
+
+[node name="Bill" parent="." unique_id=845828032 instance=ExtResource("16_2cqfq")]
+position = Vector2(-337, 9)
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("17_yaehf")

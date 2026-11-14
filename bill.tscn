@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://bmuf5rr2mq3dv"]
+
+[ext_resource type="Texture2D" uid="uid://c65kvn056r1fk" path="res://Assets/Bullet_bill.png" id="2_43l7l"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yrhdk"]
+atlas = ExtResource("2_43l7l")
+region = Rect2(432, 660, 324, 300)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_npx17"]
+radius = 183.0
+height = 366.0
+
+[node name="Bill" type="CharacterBody2D" unique_id=845828032]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=303142878]
+position = Vector2(-88.36251, 320.82617)
+scale = Vector2(-1.4719071, 1.6319779)
+texture = SubResource("AtlasTexture_yrhdk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1631898979]
+position = Vector2(-44, 365)
+shape = SubResource("CapsuleShape2D_npx17")
