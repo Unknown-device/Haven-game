@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://neafyrt5gjco" path="res://ball.tscn" id="1_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://bfuywkg4nxid7" path="res://pol.tscn" id="2_h2yge"]
+[ext_resource type="Script" uid="uid://rxm52wuppdwv" path="res://fall.gd" id="3_h2yge"]
 
 [node name="Node2D" type="Node2D" unique_id=663734214]
 
@@ -17,3 +18,4 @@ rotation = 3.1415927
 
 [node name="Ball" parent="." unique_id=293557840 instance=ExtResource("1_0xm2m")]
 position = Vector2(263.8011, 206.28915)
+script = ExtResource("3_h2yge")
