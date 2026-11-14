@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://cnil5acik6mjr"]
+
+[ext_resource type="Texture2D" uid="uid://dpntl6sqk7yir" path="res://Assets/stern.png" id="1_4jn4t"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_mojyh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d84hs"]
+size = Vector2(32, 32)
+
+[node name="Coin" type="StaticBody2D" unique_id=96053170]
+collision_layer = 4
+collision_mask = 4
+physics_material_override = SubResource("PhysicsMaterial_mojyh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=105145774]
+shape = SubResource("RectangleShape2D_d84hs")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=753181722]
+texture = ExtResource("1_4jn4t")
