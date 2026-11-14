@@ -1,14 +1,15 @@
-[gd_scene load_steps=2 format=3]
+[gd_scene format=3 uid="uid://bqsmppcftcco3"]
 
-[ext_resource type="Script" path="res://ui/pause_menu.gd" id="1_pause_menu"]
+[ext_resource type="Script" uid="uid://bvv3dl6i56xgd" path="res://ui/pause_menu.gd" id="1_pause_menu"]
+[ext_resource type="FontFile" uid="uid://x42fvcpx8yof" path="res://Assets/BigBlueTerm437NerdFont-Regular.ttf" id="2_ejwgg"]
 
-[node name="PauseMenu" type="CanvasLayer"]
+[node name="PauseMenu" type="CanvasLayer" unique_id=1255668451]
 process_mode = 2
 layer = 10
 visible = false
 script = ExtResource("1_pause_menu")
 
-[node name="Overlay" type="Control" parent="."]
+[node name="Overlay" type="Control" parent="." unique_id=1727173127]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -16,7 +17,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Dim" type="ColorRect" parent="Overlay"]
+[node name="Dim" type="ColorRect" parent="Overlay" unique_id=1866270632]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -25,7 +26,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 0.68)
 
-[node name="CenterContainer" type="CenterContainer" parent="Overlay"]
+[node name="CenterContainer" type="CenterContainer" parent="Overlay" unique_id=354917936]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -33,31 +34,35 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Overlay/CenterContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Overlay/CenterContainer" unique_id=1601899279]
 layout_mode = 2
 theme_override_constants/separation = 18
 alignment = 1
 
-[node name="Title" type="Label" parent="Overlay/CenterContainer/VBoxContainer"]
+[node name="Title" type="Label" parent="Overlay/CenterContainer/VBoxContainer" unique_id=1076620227]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_ejwgg")
 theme_override_font_sizes/font_size = 52
 text = "PAUSED"
 horizontal_alignment = 1
 
-[node name="ResumeButton" type="Button" parent="Overlay/CenterContainer/VBoxContainer"]
+[node name="ResumeButton" type="Button" parent="Overlay/CenterContainer/VBoxContainer" unique_id=1209752222]
 custom_minimum_size = Vector2(260, 52)
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_ejwgg")
 theme_override_font_sizes/font_size = 22
 text = "Resume"
 
-[node name="MainMenuButton" type="Button" parent="Overlay/CenterContainer/VBoxContainer"]
+[node name="MainMenuButton" type="Button" parent="Overlay/CenterContainer/VBoxContainer" unique_id=1429863121]
 custom_minimum_size = Vector2(260, 52)
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_ejwgg")
 theme_override_font_sizes/font_size = 22
 text = "Main Menu"
 
-[node name="QuitButton" type="Button" parent="Overlay/CenterContainer/VBoxContainer"]
+[node name="QuitButton" type="Button" parent="Overlay/CenterContainer/VBoxContainer" unique_id=1455356125]
 custom_minimum_size = Vector2(260, 52)
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_ejwgg")
 theme_override_font_sizes/font_size = 22
 text = "Quit"
