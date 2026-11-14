@@ -1,17 +1,30 @@
 [gd_scene format=3 uid="uid://bxwilrem56v1k"]
 
-[ext_resource type="Texture2D" uid="uid://dnhgv0hwkock4" path="res://Assets/spike_rot.png" id="1_ydvp2"]
-[ext_resource type="Script" path="res://spike.gd" id="2_spike"]
+[ext_resource type="Texture2D" uid="uid://g0qyltc3cjlu" path="res://Assets/spike.png" id="2_2xrev"]
+[ext_resource type="Script" uid="uid://bwd1ww52wmrh5" path="res://spike.gd" id="2_spike"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mojyh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_2xrev")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 15.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_17o4a"]
+size = Vector2(24, 20)
 
 [node name="Spike" type="Area2D" unique_id=266197569]
 scale = Vector2(2, 2)
 script = ExtResource("2_spike")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=935354217]
-texture = ExtResource("1_ydvp2")
+[node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=743107030]
+sprite_frames = SubResource("SpriteFrames_mojyh")
+autoplay = "default"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=272744782]
-position = Vector2(2, 6)
+position = Vector2(0, 6)
 shape = SubResource("RectangleShape2D_17o4a")

@@ -4,8 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://bfuywkg4nxid7" path="res://pol.tscn" id="2_h2yge"]
 [ext_resource type="Script" uid="uid://boa5scnw8xkf7" path="res://camera_2d.gd" id="2_lquwl"]
 [ext_resource type="Script" uid="uid://rxm52wuppdwv" path="res://fall.gd" id="3_h2yge"]
-[ext_resource type="PackedScene" uid="uid://cmto3t4kbvspa" path="res://Assets/lvls/chunk01.tscn" id="4_chunk"]
-[ext_resource type="Script" path="res://game.gd" id="5_game"]
+[ext_resource type="PackedScene" uid="uid://cmto3t4kbvspa" path="res://Assets/lvls/chunks/chunk01.tscn" id="4_chunk"]
+[ext_resource type="Script" uid="uid://dyqvu0mhy5n8g" path="res://game.gd" id="5_game"]
 [ext_resource type="PackedScene" path="res://ui/pause_menu.tscn" id="6_pause"]
 [ext_resource type="PackedScene" path="res://ui/game_over_menu.tscn" id="7_gameover"]
 [ext_resource type="Script" path="res://chunk_manager.gd" id="8_chunk_manager"]
@@ -31,9 +31,9 @@ position = Vector2(256, 64)
 rotation = 3.1415927
 
 [node name="Ball" parent="." unique_id=293557840 instance=ExtResource("1_0xm2m")]
-position = Vector2(263.8011, 206.28915)
+position = Vector2(64, 320)
 script = ExtResource("3_h2yge")
 
-[node name="PauseMenu" parent="." instance=ExtResource("6_pause")]
+[node name="PauseMenu" parent="." unique_id=1572494664 instance=ExtResource("6_pause")]
 
-[node name="GameOverMenu" parent="." instance=ExtResource("7_gameover")]
+[node name="GameOverMenu" parent="." unique_id=620424581 instance=ExtResource("7_gameover")]

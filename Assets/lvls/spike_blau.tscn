@@ -1,17 +1,153 @@
 [gd_scene format=3 uid="uid://bknlm2ij1fa45"]
 
 [ext_resource type="Texture2D" uid="uid://b34kr6s7yvmhq" path="res://Assets/spike_blau.png" id="1_0oyr2"]
-[ext_resource type="Script" path="res://spike.gd" id="2_spike"]
+[ext_resource type="Texture2D" uid="uid://binu5qt18bxc4" path="res://Assets/spike_blau_animation.png" id="2_i50a8"]
+[ext_resource type="Script" uid="uid://bwd1ww52wmrh5" path="res://spike.gd" id="2_spike"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o63qw"]
+atlas = ExtResource("2_i50a8")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2v3yy"]
+atlas = ExtResource("2_i50a8")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cw6eb"]
+atlas = ExtResource("2_i50a8")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_loluv"]
+atlas = ExtResource("2_i50a8")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5y72g"]
+atlas = ExtResource("2_i50a8")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o0t46"]
+atlas = ExtResource("2_i50a8")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kct66"]
+atlas = ExtResource("2_i50a8")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mojyh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o63qw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2v3yy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cw6eb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_loluv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5y72g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o0t46")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kct66")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_0oyr2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_0oyr2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_0oyr2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_0oyr2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_0oyr2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_0oyr2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_0oyr2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_0oyr2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_0oyr2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_0oyr2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_0oyr2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_0oyr2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_0oyr2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_0oyr2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_0oyr2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_0oyr2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_0oyr2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_0oyr2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_0oyr2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_0oyr2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_0oyr2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_0oyr2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_0oyr2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_0oyr2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_0oyr2")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 15.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_17o4a"]
+size = Vector2(24, 20)
 
 [node name="Spike" type="Area2D" unique_id=266197569]
 scale = Vector2(2, 2)
 script = ExtResource("2_spike")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=481340937]
-texture = ExtResource("1_0oyr2")
+[node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=1701948182]
+sprite_frames = SubResource("SpriteFrames_mojyh")
+autoplay = "default"
+frame_progress = 0.5392466
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1542067068]
-position = Vector2(2, 6)
+position = Vector2(0, 6)
 shape = SubResource("RectangleShape2D_17o4a")
